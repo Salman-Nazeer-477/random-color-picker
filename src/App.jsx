@@ -16,9 +16,14 @@ function App() {
     <>
       <div className="main" style={{backgroundColor: rgb}}>
         <div className="box">
-          <div onClick={newRgb} className="color-code">
-            {rgb}
-          </div>
+          <input 
+            type="text" 
+            value={rgb} 
+            onChange={(e)=> setRgb(e.target.value)}
+          />
+          <button onClick={newRgb} className="color-code">
+            Generate
+          </button>
         </div>
       </div>
     </>
