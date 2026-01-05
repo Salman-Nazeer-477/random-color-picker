@@ -7,7 +7,7 @@ function App() {
     let R = Math.floor(Math.random() * 256).toString(16)
     let G = Math.floor(Math.random() * 256).toString(16)
     let B = Math.floor(Math.random() * 256).toString(16)
-    let RGB = "#" + R + G + B
+    let RGB = R + G + B
     setRgb(RGB)
   }
   return (
@@ -16,7 +16,7 @@ function App() {
         <div className="box">
           <input 
             type="text" 
-            value={rgb} 
+            value={`#{rgb}`} 
             onChange={(e)=> setRgb(e.target.value)}
           />
           <button onClick={newRgb} className="color-code">
