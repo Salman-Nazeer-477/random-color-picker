@@ -4,9 +4,9 @@ import './App.css'
 function App() {
   const [rgb, setRgb] = useState("#000000")
   function newRgb(){
-    let R = Math.floor(Math.random() * 100)
-    let G = Math.floor(Math.random() * 100)
-    let B = Math.floor(Math.random() * 100)
+    let R = Math.floor(Math.random() * 256).toString(16)
+    let G = Math.floor(Math.random() * 256).toString(16)
+    let B = Math.floor(Math.random() * 256).toString(16)
     let RGB = "#" + R + G + B
     setRgb(RGB)
   }
